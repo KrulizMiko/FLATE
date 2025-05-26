@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Админка</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, button { display: block; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>Добавить тур</h1>
+  <form id="addTour">
+    <input type="text" id="title" placeholder="Название" required>
+    <input type="number" id="price" placeholder="Цена" required>
+    <button type="submit">Сохранить</button>
+  </form>
+  <script>
+    document.getElementById('addTour').addEventListener('submit', (e) => {
+      e.preventDefault();
+      fetch('/admin/api/tours', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: document.getElementById('title').value,
+          price: document.getElementById('price').value
+        })
+      }).then(() => alert('Тур добавлен!'));
+    });
+  </script>
+</body>
+</html>
