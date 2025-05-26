@@ -1,151 +1,65 @@
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    background-color: #ffffff;
-    font-family: 'Poppins-Regular', sans-serif;
-    color: #000000;
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url("../fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url("../fonts/Poppins-SemiBold.ttf");
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative; /* Добавляем для z-index */
+    margin: 0 160px;
 }
 
 .header {
-    position: relative; /* Для позиционирования фона */
-    padding: 40px 0; /* Увеличиваем отступы */
-    min-height: 500px; /* Минимальная высота блока */
+background-image: url(../images/header.png);
+height: 100vh;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.header-line {
+    padding-top: 40px;
     display: flex;
     align-items: center;
-    color: white; /* Основной цвет текста белый */
-    overflow: hidden; /* Скрываем выходящие за границы части */
+    justify-content: space-around;
 }
 
-.header-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
-
-.header-content {
-    display: flex;
-    flex-direction: column;
-    gap: 30px; /* Увеличиваем промежутки */
-    position: relative;
-    z-index: 1; /* Поднимаем контент над фоном */
-    width: 100%;
-}
-
-.header-text h1 {
-    font-family: 'Poppins-Bold', sans-serif;
-    font-size: 24px;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Тень для лучшей читаемости */
-}
-
-.header-text p {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.menu-list {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.menu-item a {
-    text-decoration: none;
-    color: white; /* Белый цвет для ссылок */
-    font-family: 'Poppins-SemiBold', sans-serif;
-    font-size: 14px;
-    transition: color 0.3s;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.menu-item a:hover {
-    color: #3a86ff;
-    text-shadow: none;
-}
-
-.search-options {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.option-btn {
-    padding: 8px 15px;
-    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый */
-    border: 1px solid white;
-    border-radius: 5px;
-    font-family: 'Poppins-Regular', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s;
+.nav-item-logo {
     color: white;
+    text-decoration: none;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
 }
 
-.option-btn:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 16px;
+
+    margin-right: 72px;
+
+    transition: color 0.99 linear;   
 }
 
-/* Адаптация для планшетов */
-@media (min-width: 768px) {
-    .header-text h1 {
-        font-size: 28px;
-    }
-    
-    .header-text p {
-        font-size: 18px;
-    }
-    
-    .menu-item a {
-        font-size: 16px;
-    }
-    
-    .option-btn {
-        padding: 10px 20px;
-    }
+.nav-item:hover {
+    color: black;
 }
 
-/* Адаптация для ПК */
-@media (min-width: 1024px) {
-    .header {
-        min-height: 600px; /* Увеличиваем высоту на десктопах */
-    }
-    
-    .header-content {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    .search-options {
-        margin-left: auto;
-    }
-}
+.container-hello {
+    position: relative;
 
-/* Затемнение фона для лучшей читаемости */
-.header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 0;
+
 }
