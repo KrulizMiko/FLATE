@@ -19,6 +19,7 @@ body {
 
 .container {
     margin: 0 160px;
+	
 }
 
 .header {
@@ -26,6 +27,7 @@ background-image: url(../images/header.png);
 height: 100vh;
 background-repeat: no-repeat;
 background-size: cover;
+
 }
 
 .header-line {
@@ -33,6 +35,7 @@ background-size: cover;
     display: flex;
     align-items: center;
     justify-content: space-around;
+	/* weight:1120px; */
 }
 
 .nav-item-logo {
@@ -59,7 +62,27 @@ background-size: cover;
 }
 
 .container-hello {
-    position: relative;
+    background-color: white;
+	width:1120px;
+	position:absolute;
+	top: 522px;
+	border: 3px solid #ccc;
+	border-radius: 40px;
+	display: block;
+}
 
+.hello-text {
+	position: relative;
+	
+	margin: 40px 40px;
+	text-align: left;
+	line-height: normal;
+	font-family: 'Poppins-Regular', sans-serif;
+	font-size: 32px;
+}
 
+.hello {
+	color: #008ec4;
+	font-family: 'Poppins-SemiBold', sans-serif;
+	font-size: 60px;
 }
