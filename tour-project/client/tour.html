@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+<head>
+  <meta charset="UTF-8">
+  <title>FLATE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    
+    .header {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px 0;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .header-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    .nav {
+      display: flex;
+      gap: 30px;
+    }
+    
+    .nav-item {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    .nav-item-logo {
+      text-decoration: none;
+      color: #333;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    .container-hello {
+      margin: 40px 0;
+    }
+    
+    .hello {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    
+    .search-option {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+      padding: 15px;
+      background: #f8f8f8;
+      border-radius: 8px;
+    }
+    
+    .menu-list {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .search-item {
+      text-decoration: none;
+      color: #555;
+      padding: 8px 15px;
+      background: #fff;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    .search img {
+      width: 24px;
+      height: 24px;
+    }
+    
+    /* Стили для карточек туров */
+    .tours-section {
+      margin: 50px 0;
+    }
+    
+    .tours-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .tours-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    
+    .tour-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .tour-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .tour-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .tour-content {
+      padding: 20px;
+    }
+    
+    .tour-title {
+      font-size: 20px;
+      margin: 0 0 10px 0;
+    }
+    
+    .tour-description {
+      color: #666;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    
+    .tour-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .tour-price {
+      font-weight: bold;
+      font-size: 18px;
+      color: #1470c7;
+    }
+    
+    .tour-button {
+      background: #000000;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    
+    .tour-button:hover {
+      background: #1470c7;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="header">
+    <div class="container">
+      <div class="header-line">
+        <div class="logo">
+          <a class="nav-item-logo" href="../client/index.html">FLATE</a>
+        </div>
+
+        <div class="nav">
+          <a class="nav-item" href="@">Туры</a>
+          <a class="nav-item" href="@">ГИДы</a>
+          <a class="nav-item" href="@">Контакты</a>
+          <a class="nav-item" href="@">Авторизация</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <section class="container-hello">
+      <div class="hello-text"> 
+        <h1 class="hello">Здравствуйте!</h1>
+        <p>Исследуйте красивые места в мире с программой Flyte</p>
+      </div>
+      
+      <div class="search-option">
+        <nav class="main-menu">
+          <ul class="menu-list">
+            <a>Местоположение</a>
+            <a>Совместно</a>
+            <a>Забронировать</a>
+          </ul>
+        </nav>
+      
+        <a class="search-item" href="@">Добавить страну</a>
+        <a class="search-item" href="@">Добавить людей</a>
+        <a class="search-item" href="@">Добавить дату</a>
+      </div>
+      
+      <div class="search">
+        <a href="#">
+          <img src="../images/search.png" alt="search">
+        </a>
+      </div>
+    </section>
+    
+<!-- Секция с карточками туров -->
+<section class="tours-section">
+  <h2 class="tours-title">Популярные туры</h2>
+  
+  <div class="tours-grid">
+    <!-- Карточка тура 1 -->
+    <div class="tour-card">
+      <img src="https://a.travelcdn.mts.ru/property-photos/1633728227/2347900126/bfc7bf9cbeaf3a46a32d750f6a8515557ed6894a.jpeg" alt="Париж" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">COSMOS IZH</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star"> <!-- Для половины звезды -->
+          </div>
+        </div>
+        <p class="tour-description">Ижевск/Удмуртия/Россия</p>
+        <div class="tour-details">
+          <span class="tour-price">109 800 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка тура 2 -->
+    <div class="tour-card">
+      <img src="https://pix10.agoda.net/hotelImages/291210/-1/9c0ad48fc8ba4a5a2977370651adf259.jpg?ca=9&ce=1&s=414x232" alt="Токио" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">Shanghai Fish Inn Bund</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+          </div>
+        </div>
+        <p class="tour-description">Шанхай/южная часть дельты Янцзы/Китай</p>
+        <div class="tour-details">
+          <span class="tour-price">50 500 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка тура 3 -->
+    <div class="tour-card">
+      <img src="https://maldives.ru/upload/iblock/d05/3qp2t9lv6zpi7x2eh10t8serwo49lkqj/ef97fb5bec97d320924bcbdcbc142961.jpg" alt="Нью-Йорк" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">Палаццо Версаче</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+          </div>
+        </div>
+        <p class="tour-description">Мейн Бич/Голд-Кост/Австралия</p>
+        <div class="tour-details">
+          <span class="tour-price">180 400 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка тура 4 -->
+    <div class="tour-card">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/305582502.jpg?k=a63ceffc38e48825703cead04fcd8f785ff72fcff01190811ad5a282aeba77af&o=&hp=1" alt="Бали" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">Impérial Palace</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+          </div>
+        </div>
+        <p class="tour-description">Ла-Боль-Эскублак/Пеи-де-ла-Луар/Франция</p>
+        <div class="tour-details">
+          <span class="tour-price">120 400 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка тура 5 -->
+    <div class="tour-card">
+      <img src="https://a.travelcdn.mts.ru/property-photos/1633728227/2347900126/6ddb201015fc9e63509e10e14d2d73a902c3b265.png" alt="Рим" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">Марк Отель</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+          </div>
+        </div>
+        <p class="tour-description">Санкт-Петербург/Северо-Западный федеральный округ/Россия</p>
+        <div class="tour-details">
+          <span class="tour-price">130 000 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка тура 6 -->
+    <div class="tour-card">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/372209952.jpg?k=7747afe12e4e5fc4d24c71d7093fc25ae9702feceb58dc5f6baa748824d3322d&o=&hp=1" alt="Греция" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">Novotel Beijing Xin Qiao</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="☆" class="star">
+            <img src="../images/star.png" alt="☆" class="star">
+          </div>
+        </div>
+        <p class="tour-description">Пекин/Северо-Восточный регион/Китай</p>
+        <div class="tour-details">
+          <span class="tour-price">75 800 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- НОВЫЕ КАРТОЧКИ (7-12) -->
+    
+    <!-- Карточка тура 7 -->
+    <div class="tour-card">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/467560089.jpg?k=5b48cd3355ee287277c5df32fd124a15769412a04a1574a073d9cb10473be2e5&o=&hp=1" alt="Дубай" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">Luxury Collection Hotel</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="½" class="star">
+          </div>
+        </div>
+        <p class="tour-description">Киото/Кансай/Япония</p>
+        <div class="tour-details">
+          <span class="tour-price">200 700 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка тура 8 -->
+    <div class="tour-card">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/224935196.jpg?k=54e8064bf90c8a257127730bbd8930e4294f181559768ab72983493ce4dacf08&o=&hp=1" alt="Прага" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">Wildlife Retreat at Taronga</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+          </div>
+        </div>
+        <p class="tour-description">Сидней/Мосман/Австралия</p>
+        <div class="tour-details">
+          <span class="tour-price">200 000 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка тура 9 -->
+    <div class="tour-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Big_Spring_Texas_Settles_Hotel_2013.jpg/1200px-Big_Spring_Texas_Settles_Hotel_2013.jpg" alt="Исландия" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">Hotel Settles</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+          </div>
+        </div>
+        <p class="tour-description">Биг-Спринг/Техас/США</p>
+        <div class="tour-details">
+          <span class="tour-price">111 000 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка тура 10 -->
+    <div class="tour-card">
+      <img src="https://img1.advisor.travel/1200x630px-Stratosphere_Las_Vegas_2.jpg" alt="Лондон" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">Стратосфера</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="☆" class="star">
+            <img src="../images/star.png" alt="☆" class="star">
+          </div>
+        </div>
+        <p class="tour-description">Лас-Вегас/Невада/США</p>
+        <div class="tour-details">
+          <span class="tour-price">60 600 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка тура 11 -->
+    <div class="tour-card">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/359577623.jpg?k=399d06fddeff4dd511c232d70b3d3a270aea6c7becd0b9adb67b39164e1342d4&o=&hp=1" alt="Сидней" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">Mikawaanjo Ekimae</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="½" class="star">
+          </div>
+        </div>
+        <p class="tour-description">Нагоя/Префектура Айти/Япония</p>
+        <div class="tour-details">
+          <span class="tour-price">40 100 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка тура 12 -->
+    <div class="tour-card">
+      <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/33228222.jpg?k=5326d884010b5bdb2617159aa6bf6f8f764bc31e6e6936a9c9cab07693b28d1a&o=" alt="Мальдивы" class="tour-image">
+      <div class="tour-content">
+        <h3 class="tour-title">Отель Морис</h3>
+        <div class="rating">
+          <div class="stars">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+            <img src="../images/star.png" alt="★" class="star">
+          </div>
+        </div>
+        <p class="tour-description">Париж/Иль-де-Франс/Франция</p>
+        <div class="tour-details">
+          <span class="tour-price">80 800 РУБ</span>
+          <button class="tour-button">Забронировать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!DOCTYPE html>
+<html lang="ru"> 
+<head>
+  <meta charset="UTF-8">
+  <title>FLATE</title>
+  <style>
+    /* ... (остальные стили остаются без изменений) ... */
+    
+    /* Стили для подвала */
+    footer {
+      background: #000000; /* Изменено на черный цвет */
+      color: white;
+      padding: 40px 0 20px;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .footer-column li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-column a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 14px;
+    }
+    
+    .footer-column a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .copyright {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    .payment-methods {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .payment-methods img {
+      height: 20px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <!-- ... (остальная часть HTML остается без изменений) ... -->
+
+  <!-- Подвал сайта -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <!-- Колонка 1 -->
+        <div class="footer-column">
+          <h3>Компания</h3>
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+        
+        <!-- Колонка 2 -->
+        <div class="footer-column">
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Свяжитесь с нами</a></li>
+            <li><a href="#">Партнерство</a></li>
+          </ul>
+        </div>
+        
+        <!-- Колонка 3 -->
+        <div class="footer-column">
+          <h3>Социальные сети</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <!-- Колонка 4 -->
+        <div class="footer-column">
+          <!-- Пустая колонка для выравнивания -->
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">© Авторские права lftps 2025</div>
+        <div class="payment-methods">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="VISA">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Иконки Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</body>
+</html>

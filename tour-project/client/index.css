@@ -24,7 +24,7 @@ body {
 
 .header {
 background-image: url(../images/header.png);
-height: 100vh;
+height: 736px;
 background-repeat: no-repeat;
 background-size: cover;
 
@@ -54,7 +54,7 @@ background-size: cover;
 
     margin-right: 72px;
 
-    transition: color 0.99 linear;   
+    transition: color 0.35 linear;   
 }
 
 .nav-item:hover {
@@ -63,26 +63,101 @@ background-size: cover;
 
 .container-hello {
     background-color: white;
-	width:1120px;
+	width: 80%;
 	position:absolute;
 	top: 522px;
 	border: 3px solid #ccc;
 	border-radius: 40px;
-	display: block;
+	
 }
 
 .hello-text {
 	position: relative;
-	
 	margin: 40px 40px;
 	text-align: left;
 	line-height: normal;
 	font-family: 'Poppins-Regular', sans-serif;
 	font-size: 32px;
+
+    line-height: 0.3;
 }
 
 .hello {
 	color: #008ec4;
 	font-family: 'Poppins-SemiBold', sans-serif;
 	font-size: 60px;
+
 }
+
+.hello-text p {
+  margin-top: 32px; /* Отступ между заголовком и параграфом */
+  margin-bottom: 0; /* Убираем нижний отступ у параграфа */
+}
+
+.buttons-container {
+    display: flex;
+    gap: 106px;
+    margin-top: 48px;
+    margin-left: 40px; /* отступы нах */
+    margin-bottom: 40px;
+    margin-right: 40px;
+
+	border: 3px solid #ccc;
+	border-radius: 70px; 
+    
+    
+}
+
+.action-button {
+ display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px; /* Отступ между строками текста */
+  text-align: left; /* Выравнивание текста по левому краю */
+
+    text-decoration: none;
+
+    margin-top: 23px;
+    margin-bottom: 23px;
+    margin-left: 20px;
+
+
+}
+
+.button-title {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #1A1A1A;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.button-subtitle {
+    font-family: 'Poppins-Regular', sans-serif;
+    color: #8C8C8C;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.textik {
+    display: flex;
+  flex-direction: column;
+  gap: 4px; /* Отступ между строками текста */
+  text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.icon {
+    width: 32px; /* Фиксированная ширина */
+  height: 32px; /* Фиксированная высота */
+  flex-shrink: 0; /* Запрещаем сжатие иконки */
+}
+
+.search {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    position: relative;
+    
+    left: 470px;
+    margin-right: 12px;
+}
+
+
