@@ -155,9 +155,138 @@ background-size: cover;
     display: flex;
     align-items: center; /* Выравнивание по вертикали */
     position: relative;
-    
-    left: 470px;
     margin-right: 12px;
+
+    margin-left: auto; /* выталкивает кнопку поиска вправо */
 }
 
 
+/* === Мобильные (до 768px) === */
+@media (max-width: 767px) {
+  .buttons-container {
+    flex-direction: column;
+  }
+}
+
+.why-container {
+    padding: 216px 0; /*! отступы(смотри через alt) !*/
+    position: relative;
+    
+}
+
+.text-question {
+text-align: center; /* Выравнивание текста по центру */
+
+font-family: 'Poppins-Bold', sans-serif;
+    color: #1A1A1A;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.why-card {
+    display: flex;
+    flex-direction: row;
+    
+    margin-top: 72px;
+    margin-left: 90px;
+    gap: 104px;
+
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.icon-why {
+     width: 80px; /* Фиксированная ширина */
+  height: 80px; /* Фиксированная высота */
+  flex-shrink: 0; /* Запрещаем сжатие иконки */
+}
+
+.general-text {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #1A1A1A;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.info {
+    font-family: 'Poppins-Regular', sans-serif;
+    color: #191919;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.hotel-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  /* Центрирование по горизонтали */
+
+    margin-top: 30px;
+    margin-left: 30px;
+    gap: 100px;
+}
+
+.hotel-location {
+     width: 20px; /* Фиксированная ширина */
+  height: 20px; /* Фиксированная высота */
+  flex-shrink: 0; /* Запрещаем сжатие иконки */
+}
+
+.hotel-item-details {
+    display: flex;
+  flex-direction: column;
+}
+
+.hotel-item-title {
+display: flex;
+  flex-direction: row;
+
+  font-family: 'Poppins-Bold', sans-serif;
+    color: #1A1A1A;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.hotel-item-text {
+    display: flex;
+  flex-direction: row;
+
+  font-family: 'Poppins-Regular', sans-serif;
+    color: #1A1A1A;
+    font-size: 12px;
+    font-weight: 500;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.hotel-item-info {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.hotel-item-price {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #191919;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.welcome-to-china {
+    background-image: url(../images/china.png);
+    height: 719px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    margin-top: 104px; /* Отступ между блоками по вертикали */
+}
+
+.welcome-title {
+    margin-top: 0 100px;
+}
+
+.mem-tiktok {
+    background-image: url(../images/flag-china.png);
+    height: 719px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
