@@ -23,8 +23,8 @@ body {
 }
 
 .header {
-background-image: url(горы);
-height: 100vh;
+background-image: url(../images/header.png);
+height: 736px;
 background-repeat: no-repeat;
 background-size: cover;
 
@@ -54,57 +54,246 @@ background-size: cover;
 
     margin-right: 72px;
 
-    transition: color 0.99 linear;   
+    transition: color 0.35 linear;   
 }
 
 .nav-item:hover {
-    color: #1470c7;
+    color: black;
 }
 
 .container-hello {
     background-color: white;
-	width:1120px;
+	width: 80%;
 	position:absolute;
 	top: 522px;
 	border: 3px solid #ccc;
 	border-radius: 40px;
-	display: block;
+	
 }
 
 .hello-text {
 	position: relative;
-	
 	margin: 40px 40px;
 	text-align: left;
 	line-height: normal;
 	font-family: 'Poppins-Regular', sans-serif;
 	font-size: 32px;
+
+    line-height: 0.3;
 }
 
 .hello {
 	color: #008ec4;
 	font-family: 'Poppins-SemiBold', sans-serif;
 	font-size: 60px;
+
 }
 
-.rating {
-  display: flex;
+.hello-text p {
+  margin-top: 32px; /* Отступ между заголовком и параграфом */
+  margin-bottom: 0; /* Убираем нижний отступ у параграфа */
+}
+
+.buttons-container {
+    display: flex;
+    gap: 106px;
+    margin-top: 48px;
+    margin-left: 40px; /* отступы нах */
+    margin-bottom: 40px;
+    margin-right: 40px;
+
+	border: 3px solid #ccc;
+	border-radius: 70px; 
+    
+    
+}
+
+.action-button {
+ display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 12px; /* Отступ между строками текста */
+  text-align: left; /* Выравнивание текста по левому краю */
+
+    text-decoration: none;
+
+    margin-top: 23px;
+    margin-bottom: 23px;
+    margin-left: 20px;
+
+
 }
 
-.stars {
-  display: flex;
-  margin-right: 5px;
+.button-title {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #1A1A1A;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.star {
-  width: 16px;
-  height: 16px;
-  margin-right: 2px;
+.button-subtitle {
+    font-family: 'Poppins-Regular', sans-serif;
+    color: #8C8C8C;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-.rating-value {
-  font-size: 14px;
+.textik {
+    display: flex;
+  flex-direction: column;
+  gap: 4px; /* Отступ между строками текста */
+  text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.icon {
+    width: 32px; /* Фиксированная ширина */
+  height: 32px; /* Фиксированная высота */
+  flex-shrink: 0; /* Запрещаем сжатие иконки */
+}
+
+.search {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    position: relative;
+    margin-right: 12px;
+
+    margin-left: auto; /* выталкивает кнопку поиска вправо */
+}
+
+
+/* === Мобильные (до 768px) === */
+@media (max-width: 767px) {
+  .buttons-container {
+    flex-direction: column;
+  }
+}
+
+.why-container {
+    padding: 216px 0; /*! отступы(смотри через alt) !*/
+    position: relative;
+    
+}
+
+.text-question {
+text-align: center; /* Выравнивание текста по центру */
+
+font-family: 'Poppins-Bold', sans-serif;
+    color: #1A1A1A;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.why-card {
+    display: flex;
+    flex-direction: row;
+    
+    margin-top: 72px;
+    margin-left: 90px;
+    gap: 104px;
+
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.icon-why {
+     width: 80px; /* Фиксированная ширина */
+  height: 80px; /* Фиксированная высота */
+  flex-shrink: 0; /* Запрещаем сжатие иконки */
+}
+
+.general-text {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #1A1A1A;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.info {
+    font-family: 'Poppins-Regular', sans-serif;
+    color: #191919;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tours-section {
+  margin: 50px 0;
+}
+
+.tours-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Poppins-SemiBold', sans-serif;
+  color: #333;
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+.tour-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  font-family: 'Poppins-Regular', sans-serif;
+}
+
+.tour-card:hover {
+  transform: translateY(-5px);
+}
+
+.tour-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tour-content {
+  padding: 20px;
+}
+
+.tour-title {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  font-family: 'Poppins-SemiBold', sans-serif;
+  color: #333;
+}
+
+.tour-description {
   color: #666;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.tour-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tour-price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1470c7;
+  font-family: 'Poppins-SemiBold', sans-serif;
+}
+
+.tour-button {
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: 'Poppins-Regular', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.tour-button:hover {
+  background: #1470c7;
 }

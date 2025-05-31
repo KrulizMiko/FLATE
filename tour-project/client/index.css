@@ -277,16 +277,30 @@ display: flex;
     background-repeat: no-repeat;
     background-size: cover;
     
-    margin-top: 104px; /* Отступ между блоками по вертикали */
+    margin-top: 1px; /* Отступ между блоками по вертикали */
 }
 
-.welcome-title {
-    margin-top: 0 100px;
-}
+
 
 .mem-tiktok {
     background-image: url(../images/flag-china.png);
     height: 719px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+
+.welcome-title {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #ffffff;
+    font-size: 64px;
+    font-weight: 700;
+
+        margin-top: 161px;
+}
+
+.title-position {
+    display: flex;
+margin-top: 100px;
 }

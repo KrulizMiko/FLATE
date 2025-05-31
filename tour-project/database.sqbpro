@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="database.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="497"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title=".Просматриваемые" custom_title="0" dock_id="1" table="0,30:Просматриваемые"/><dock_state state="000000ff00000000fd000000010000000200000389000002a9fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000003890000012e00ffffff000002790000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">-- Таблица администраторов
+CREATE TABLE admins (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</sql><sql name="SQL 2*">-- Таблица туров
+CREATE TABLE tours (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    description TEXT,
+    price DECIMAL(10, 2) NOT NULL,
+    is_active BOOLEAN DEFAULT 1,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</sql><sql name="SQL 3*">-- Таблица отелей
+CREATE TABLE hotels (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tour_id INTEGER NOT NULL,
+    name TEXT NOT NULL,
+    description TEXT,
+    price DECIMAL(10, 2) NOT NULL,
+    location TEXT NOT NULL,
+    FOREIGN KEY (tour_id) REFERENCES tours(id) ON DELETE CASCADE
+);</sql><sql name="SQL 4*">-- Таблица гидов
+CREATE TABLE guides (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    description TEXT,
+    price DECIMAL(10, 2) NOT NULL,
+    languages TEXT,
+    is_available BOOLEAN DEFAULT 1
+);</sql><sql name="SQL 5*">-- Связь гидов с турами (многие ко многим)
+CREATE TABLE tour_guides (
+    tour_id INTEGER NOT NULL,
+    guide_id INTEGER NOT NULL,
+    PRIMARY KEY (tour_id, guide_id),
+    FOREIGN KEY (tour_id) REFERENCES tours(id) ON DELETE CASCADE,
+    FOREIGN KEY (guide_id) REFERENCES guides(id) ON DELETE CASCADE
+);</sql><sql name="SQL 6*">-- Таблица активных сессий (для отслеживания активных пользователей)
+CREATE TABLE active_sessions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ip_address TEXT NOT NULL,
+    user_agent TEXT,
+    last_activity TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</sql><current_tab id="5"/></tab_sql></sqlb_project>
