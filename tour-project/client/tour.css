@@ -297,3 +297,8 @@ font-family: 'Poppins-Bold', sans-serif;
 .tour-button:hover {
   background: #1470c7;
 }
+
+.image-photo {
+  display: flex;
+  flex-direction: column;
+}

@@ -277,19 +277,8 @@ display: flex;
     background-repeat: no-repeat;
     background-size: cover;
     
-    margin-top: 1px; /* Отступ между блоками по вертикали */
+    margin-top: 1px; /* Отступ между блоками по вертикали */    
 }
-
-
-
-.mem-tiktok {
-    background-image: url(../images/flag-china.png);
-    height: 719px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
 
 .welcome-title {
     font-family: 'Poppins-Bold', sans-serif;
@@ -303,4 +292,44 @@ display: flex;
 .title-position {
     display: flex;
 margin-top: 100px;
+}
+
+.photo-class {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.image-photo {
+    margin-left: 20px;
+}
+
+.select-text-card {
+display: flex;
+flex-direction: row;
+}
+
+.welcome-text {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #ffffff;
+    font-weight: 700;
+
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto 15px;
+    display: inline-block;
+    text-align: left;
+
+    font-size: 24px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 20px;
+}
+
+
+
+.welcome-list li:before {
+    content: "-";
+    position: absolute;
+    left: 0;
 }
