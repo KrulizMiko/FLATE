@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url("../fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url("../fonts/Poppins-SemiBold.ttf");
+}
+
+.container {
+    margin: 0 160px;
+	
+}
+
+.header {
+background-image: url(../images/France.png);
+height: 736px;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.header-line {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+	/* weight:1120px; */
+}
+.nav-item-logo {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 16px;
+
+    margin-right: 72px;
+
+    transition: color 0.35 linear;   
+}
+
+.nav-item:hover {
+    color: black;
+}
+
+.container-hello {
+    background-color: white;
+	width:80%;
+	position: absolute;
+	top: 522px;
+	border: 3px solid #ccc;
+	border-radius: 40px;
+
+    
+	
+}
+.hello-text {
+	margin: 40px 47px;
+	text-align: left;
+	line-height: normal;
+	font-family: 'Poppins-Regular', sans-serif;
+	font-size: 32px;
+    line-height: 1,5;
+    
+}
+
+.hello {
+	color: #008ec4;
+	font-family: 'Poppins-SemiBold', sans-serif;
+	font-size: 60px;
+
+}
+.container-hello-two {
+    background-color: white;
+	width:80%;
+	position: absolute;
+	top: 1250px;
+	border: 3px solid #ccc;
+	border-radius: 40px;
+
+    
+	
+}
+.hello-text-two {
+	margin: 40px 47px;
+	text-align: left;
+	line-height: normal;
+	font-family: 'Poppins-Regular', sans-serif;
+	font-size: 32px;
+    line-height: 1,5;
+    
+}
+
+.hello-two {
+	color: #008ec4;
+	font-family: 'Poppins-SemiBold', sans-serif;
+	font-size: 60px;
+
+}
+.hello-text p {
+    margin-top: 32px; /* Отступ между заголовком и параграфом */
+    margin-bottom: 0; /* Убираем нижний отступ у параграфа */
+  }
+  
+  .buttons-container {
+      display: flex;
+      gap: 106px;
+      margin-top: 48px;
+      margin-left: 40px; /* отступы нах */
+      margin-bottom: 40px;
+      margin-right: 40px;
+  
+      border: 3px solid #ccc;
+      border-radius: 70px; 
+  }
+  .action-button {
+    display: flex;
+     flex-direction: row;
+     align-items: center;
+     gap: 12px; /* Отступ между строками текста */
+     text-align: left; /* Выравнивание текста по левому краю */
+   
+       text-decoration: none;
+   
+       margin-top: 23px;
+       margin-bottom: 23px;
+       margin-left: 20px;
+   }
+   .button-title {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #1A1A1A;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.button-subtitle {
+    font-family: 'Poppins-Regular', sans-serif;
+    color: #8C8C8C;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.textik {
+    display: flex;
+  flex-direction: column;
+  gap: 4px; /* Отступ между строками текста */
+  text-align: left; /* Выравнивание текста по левому краю */
+}
+footer {
+      background: #000000; /* Изменено на черный цвет */
+      color: white;
+      padding: 40px 0 20px;
+      margin-top:70%;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .footer-column li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-column a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 14px;
+    }
+    
+    .footer-column a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .copyright {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    .payment-methods {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .payment-methods img {
+      height: 20px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 20px;
+    }

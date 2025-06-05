@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../client/gid.css">
+  <title>FLATE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins-Regular', sans-serif;
+    }
+    
+    /* Стили для шапки */
+    .header {
+      background-image: url(../images/gids.png);
+      height: 736px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .container {
+      margin: 0 160px;
+    }
+    
+    .header-line {
+      padding-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    
+    .nav-item-logo {
+      color: white;
+      text-decoration: none;
+      font-family: 'Poppins-Regular', sans-serif;
+      font-size: 25px;
+      font-weight: 600;
+    }
+    
+    .nav-item {
+      color: white;
+      text-decoration: none;
+      font-family: 'Poppins-Regular', sans-serif;
+      font-size: 16px;
+      margin-right: 72px;
+      transition: color 0.3s ease;   
+    }
+    
+    .nav-item:hover {
+      color: black;
+    }
+    
+    .hello-text {
+      position: relative;
+      margin: 40px 0;
+      text-align: center;
+      line-height: normal;
+    }
+    
+    .hello {
+      color: #008ec4;
+      font-family: 'Poppins-SemiBold', sans-serif;
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    
+    /* Стили для карточек гидов */
+    .guides-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin: 30px 0;
+    }
+    
+    .guide-card {
+      width: 80%;
+      max-width: 700px;
+      margin-bottom: 30px;
+      padding: 25px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .guide-info {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+    }
+    
+    .rating {
+      font-weight: bold;
+      margin-right: 20px;
+      color: #008ec4;
+      font-family: 'Poppins-SemiBold', sans-serif;
+    }
+    
+    .time {
+      margin-right: 20px;
+      font-family: 'Poppins-Regular', sans-serif;
+    }
+    
+    .order-btn {
+      color: #008ec4;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Poppins-SemiBold', sans-serif;
+      padding: 8px 16px;
+      border: 2px solid #008ec4;
+      border-radius: 6px;
+      transition: all 0.3s;
+    }
+    
+    .order-btn:hover {
+      background: #008ec4;
+      color: white;
+    }
+    
+    .description, .quote {
+      font-family: 'Poppins-Regular', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .quote {
+      font-style: italic;
+    }
+    
+    h1, h2 {
+      text-align: center;
+      font-family: 'Poppins-SemiBold', sans-serif;
+    }
+    
+    h1 {
+      color: #008ec4;
+      margin-bottom: 10px;
+    }
+    
+    h2 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+    
+    hr {
+      border: none;
+      height: 1px;
+      background: #eee;
+      margin: 20px auto;
+      width: 80%;
+    }
+    
+    /* Стили для большой карточки Китая */
+    .china-container {
+      display: flex;
+      width: 100%;
+      max-width: 12000px;
+      margin: 0 auto 60px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    .china-image {
+      width: 40%;
+      background: url('https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+    }
+    
+    .china-content {
+      width: 60%;
+      padding: 30px;
+    }
+    
+    .china-title {
+      font-size: 24px;
+      color: #008ec4;
+      margin-bottom: 20px;
+      font-family: 'Poppins-SemiBold', sans-serif;
+      text-align: center;
+    }
+    
+    .inner-guide-card {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 8px;
+    }
+    
+    .inner-guide-card:last-child {
+      margin-bottom: 0;
+    }
+    
+    /* Стили для подвала */
+    footer {
+      background: #000000;
+      color: white;
+      padding: 40px 0 20px;
+      width: 100%;
+      margin-top: 40px;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-family: 'Poppins-SemiBold', sans-serif;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .footer-column li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-column a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 14px;
+      font-family: 'Poppins-Regular', sans-serif;
+    }
+    
+    .footer-column a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .copyright {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-family: 'Poppins-Regular', sans-serif;
+    }
+    
+    .payment-methods {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .payment-methods img {
+      height: 20px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="header">
+    <div class="container">
+      <div class="header-line">
+        <div class="logo">
+          <a class="nav-item-logo" href="../client/index.html">FLATE</a>
+        </div>
+
+        <div class="nav">
+          <a class="nav-item" href="../client/tour.html">Туры</a>
+          <a class="nav-item" href="../client/gid.html">ГИДы</a>
+          <a class="nav-item" href="../client/contacts.html">Контакты</a>
+          <a class="nav-item" href="#">Авторизация</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="hello-text"> 
+      <h1 class="hello">Информация о ГИДах</h1>
+    </div>
+    
+    <!-- Большая карточка Китая с изображением и карточками гидов -->
+    <div class="china-container">
+      <div class="china-image"></div>
+      <div class="china-content">
+        <div class="china-title">Китай</div>
+        
+        <div class="inner-guide-card">
+          <h3>Каково И. Пишка</h3>
+          <div class="guide-info">
+            <span class="rating">4,9 ★</span>
+            <span class="time">24 экскурсий</span>
+            <a href="#" class="order-btn">Заказать</a>
+          </div>
+          <p class="description">
+            Откройте для себя захватывающий мир Китая, где древние традиции встречаются с современными интонациями, от Великой Китайской стены до шумных улиц Пекина.
+          </p>
+        </div>
+        
+        <div class="inner-guide-card">
+          <h3>Земля Е. Малинкина</h3>
+          <div class="guide-info">
+            <span class="rating">4,9 ★</span>
+            <span class="time">12 экскурсий</span>
+            <a href="#" class="order-btn">Заказать</a>
+          </div>
+          <p class="quote">
+            "Откройте для себя древние традиции, современные чудеса и неповторимую культуру Китая с нашим гидом!"
+          </p>
+        </div>
+      </div>
+    </div>
+    
+<div class="china-container">
+      <div class="china-image"></div>
+      <div class="china-content">
+        <div class="china-title">Китай</div>
+        
+        <div class="inner-guide-card">
+          <h3>Каково И. Пишка</h3>
+          <div class="guide-info">
+            <span class="rating">4,9 ★</span>
+            <span class="time">24 экскурсий</span>
+            <a href="#" class="order-btn">Заказать</a>
+          </div>
+          <p class="description">
+            Откройте для себя захватывающий мир Китая, где древние традиции встречаются с современными интонациями, от Великой Китайской стены до шумных улиц Пекина.
+          </p>
+        </div>
+        
+        <div class="inner-guide-card">
+          <h3>Земля Е. Малинкина</h3>
+          <div class="guide-info">
+            <span class="rating">4,9 ★</span>
+            <span class="time">12 экскурсий</span>
+            <a href="#" class="order-btn">Заказать</a>
+          </div>
+          <p class="quote">
+            "Откройте для себя древние традиции, современные чудеса и неповторимую культуру Китая с нашим гидом!"
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="guides-container">
+      <!-- Здесь могут быть другие карточки гидов -->
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Компания</h3>
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Свяжитесь с нами</a></li>
+            <li><a href="#">Партнерство</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Социальные сети</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <!-- Пустая колонка для выравнивания -->
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">© Авторские права lftps 2025</div>
+        <div class="payment-methods">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="VISA">
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
