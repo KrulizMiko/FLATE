@@ -285,13 +285,13 @@ display: flex;
     color: #ffffff;
     font-size: 64px;
     font-weight: 700;
-
-        margin-top: 161px;
+    margin: 0;
+        
 }
 
 .title-position {
     display: flex;
-margin-top: 100px;
+    margin-top: 100px;
 }
 
 .photo-class {
@@ -333,3 +333,122 @@ flex-direction: row;
     position: absolute;
     left: 0;
 }
+
+.button { /*! описываем все стили кнопки (из фигмы)!*/
+    background-color: white; /*! цвет фона !*/
+    border-radius: 60px; /*! закругление границ !*/
+    width: 178px;
+    height: 58px;
+    box-sizing: border-box; /*! задать внутренние отступы !*/
+    padding: 18px; /*! внутренние отступы !*/
+    text-align: center;
+    font-size: 18px; /*! размер тексмта !*/
+    color: #1A1A1A;
+    border: 0; /*! убрать границы !*/
+    outline: none; /*! чтобы не появлялся фокус от браузера !*/
+    cursor: pointer; /*! при наведение курсора меняется на кликающаяю руку !*/
+}
+
+.title-textik {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.mem-tiktok {
+    background-image: url(../images/flag-china.png);
+    height: 719px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+
+.china-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.mem {
+    display: flex;
+          justify-content: center;
+          align-items: center;
+    max-width: 100%;        /* Чтобы изображение не выходило за границы */
+}
+
+
+footer {
+      background: #000000; /* Изменено на черный цвет */
+      color: white;
+      padding: 40px 0 20px;
+      margin-top: 0;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .footer-column li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-column a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 14px;
+    }
+    
+    .footer-column a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .copyright {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    .payment-methods {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .payment-methods img {
+      height: 20px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 20px;
+    }
